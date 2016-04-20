@@ -1,0 +1,83 @@
+#nav {
+	display: flex;
+	justify-content: space-between;
+	background: $greenColor url('../img/ruler1.png') repeat-x 100% 100%;
+
+	.col-md-4 {
+		margin-left: -10px;
+		padding-left: 0;		
+	}
+
+	.col-md-8 {
+		padding-top: 10px;
+		padding-right: 0;
+	}
+}
+
+.nav-section {
+	padding: 18px 0;
+}
+
+.nav__logo {
+	display: flex;
+	@media (max-width: $screen-sm-min) { 
+	justify-content: center;	
+	}
+
+	a {
+		font-size: 1.875em;
+		font-weight: 900;
+		line-height: 1.5em;
+		text-decoration: none;
+		&:hover {
+			opacity: .7;
+			transform: scale(1.1); 
+			transition: 1.5s;
+			text-decoration: none;
+			 
+		}
+		span {
+			font-size: .833em;
+			font-weight: 400;
+			line-height: .833em;
+		}
+	}
+} 
+
+
+.nav__top-menu {
+
+	ul {	
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;			
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+	}
+}
+
+.nav__top-menu__item {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 10px;			
+	list-style:none;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 16.8px;
+	&:hover {
+		background: $greenBtn;
+		font-size: 14px;
+		line-height: 15.6px;
+		text-decoration: none;
+		border-radius: 4px;
+		box-shadow: 0px 3px $greenBtnShadow;
+	}
+	&.active {
+		background: $greenBtn;
+		font-size: 14px;
+		line-height: 15.6px;
+		border-radius: 4px;
+		box-shadow: 0px 3px $greenBtnShadow;
+	}
+}

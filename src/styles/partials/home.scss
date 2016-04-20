@@ -1,0 +1,149 @@
+#home {
+  padding-bottom: 10px;
+}
+
+.slider{
+	position: relative;
+	width: 100%;
+	height: 530px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.slider .slider__list{
+	position: relative;
+	width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.slider .slider__item{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%
+}
+
+.slider .slider__item img{
+	width: 100%;
+  height: 500px;
+	display: block;
+}
+
+.slider .slider__item.active{
+	z-index: 10;
+	position: relative;
+}
+.slider .slider__item.inslide{
+	z-index: 100;
+}
+
+.slider .btn {
+	position: absolute;
+	top: 40%;
+	display: block;
+	z-index: 300;
+	text-decoration: none;
+	background-color: $redColor;
+}
+.home__btn-left,
+.home__btn-right {
+	position: absolute;
+	right: 0;
+	height: 57px;
+	width: 50px;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 40px;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0 3px $redShadowColor;
+	&:hover {
+		opacity: .5;
+	}
+}
+.home__btn-right {
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+.slider__dots{
+	position: absolute;
+	bottom: 0;
+  margin: auto;
+	z-index: 500;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	width: 60%;
+    @media (max-width: $screen-md-min) {
+      width: 80%;
+    }
+
+}
+
+.slider__dots-item{
+  display: inline-block;
+  		width: 5.5%;
+        @media (max-width: $screen-md-min) {
+          width: 10%;
+        }
+  		height: 5px;
+  		margin-left: 5px;
+  		background: $greyColor;
+  		&.active {
+  			background: $redShadowColor;
+  		}
+  		&:hover {
+  			opacity: .5;
+  			background: $redShadowColor;
+  		}
+}
+.slider__dots-link{
+	display: block;
+	min-height: 10px;
+	min-width: 10px;
+	border-radius: 50%;
+}
+
+.home__slider__text {
+  position: absolute;
+  z-index: 200;
+  top: 28%;
+  left: 37.5%;
+	width: 25%;
+  margin: auto;
+	padding-bottom: 65px;
+	color: white;
+	text-align: center;
+	@media (max-width: $screen-md-min) {
+		width: 45%;
+      left: 27.5%;
+	}
+}
+
+.home__slider__text-title span {
+	padding: 0 5px;
+	background-color: $redColor;
+	border-radius: 5px;
+}
+.home__slider__text-title {
+	font-size: 3.125em;
+	font-weight: 900;
+	color: white;
+	line-height: 1.5em;
+	@media (max-width: $screen-sm-min) {
+		font-size: 2em;
+	}
+}
+
+.home__slider__text-paragraph {
+	min-width: 335px;
+	padding: 10px 15px;
+	background-color: $sliderParagraphColor;
+	opacity: .5;
+	border-radius: 5px;
+	@media (max-width: $screen-sm-min) {
+		min-width: 215px;
+	}
+}
+

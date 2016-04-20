@@ -1,0 +1,38 @@
+.intro__background{
+	padding-left: 10px;
+	padding-bottom: 10px;
+	background-color: $introBackground;
+	border-radius: 5px;
+	margin-bottom: 55px;
+}
+
+.intro__title {
+	font-size: 1.875em;
+	letter-spacing: .5px;
+	color: $greyColor;	
+}
+
+.intro__text {
+	font-size: .8125em;
+	line-height: .86em;
+	letter-spacing: -0.1px;
+}
+
+.btn {
+	background-color: $redColor;
+}
+
+#intro__btn-more {
+	width: 77%;
+	height: 50px;
+	margin-left: 15px;
+	margin-top: 25px;
+	font-size: 1.25em;
+	font-weight: 600;
+	line-height: 40px;
+	color: white;	
+	box-shadow: 0 5px $redShadowColor;
+	&:hover {
+		opacity: .5;
+	}
+}

@@ -1,0 +1,88 @@
+#clients {
+	padding-bottom: 32px;
+}
+
+#clients > .top-row > .col-md-2,
+#clients > .top-row > .col-md-1 {
+	padding: 0;
+}
+
+.top-row {
+	margin-bottom: 40px;
+}
+
+.clients__title {
+	font-size: 1em;
+	font-weight: 900;
+	color: $greyColor;
+
+	@media (max-width: $screen-md-min) {
+		text-align: center;
+	}
+}
+
+.horizontal-rule {	
+	margin-left: -45px;
+	background: url('../img/Ellipse.png') no-repeat 0 100%,
+							url('../img/Rectangle.png') repeat-x 0 90%;
+
+	.h-r-text {
+		font-size: 0;
+	}
+}
+
+.clients__btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	@media (max-width: $screen-md-min) {
+		display: none;
+	}
+
+	.btn {
+		width: 40px;
+		height: 37px;
+		background-color: #98a3a3;
+		box-shadow: 0 3px $greyColor;
+
+		&:hover,
+		&.active {
+			background-color: $redColor;
+			box-shadow: 0 3px $redShadowColor; 
+		}
+	}
+}
+
+.clients__btn-right {
+	margin-right: 20px;
+}
+
+.carousel{
+	position: relative;
+	width: 1170px;
+	overflow: hidden;
+	display: inline-block;
+	white-space : nowrap;
+
+ 	.carousel__list{
+		position: relative;
+		padding: 0;
+	}
+ 	.carousel__item{
+		display: inline-block;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 170px;
+		margin-right: 30px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+ 	.carousel__item img{
+		display: block;
+		width: 170px;
+		height: 90px;
+		pointer-events: none;
+	}
+}
+

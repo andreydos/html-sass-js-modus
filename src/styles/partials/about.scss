@@ -1,0 +1,268 @@
+#about {	
+  background: url('../img/ruler2.png') repeat-x 100% 0,
+  linear-gradient($greyBackground 400px, $whiteBackground 400px) no-repeat;
+	
+	@media (max-width: $screen-md-min) {
+		.col-md-4 {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+.container-fluid {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+.about__title{
+	margin-bottom: 5px;
+	font-size: 2.5em;
+	font-weight: 600;
+	line-height: 1em;
+	color: $redColor;
+}
+
+.about__text {
+	font-size: 0.8125em;	
+}
+
+.about__first-wrap {
+	margin-left: -20px;
+	padding-top: 115px;
+	@media (max-width: $screen-md-min) {
+		margin: 0;		
+		padding-top: 10px;
+}
+}
+
+.about__second-wrap {
+	margin-left: -85px;
+	padding-top: 55px;
+	@media (max-width: $screen-md-min) {
+		margin: 0;		
+		padding-top: 10px;
+}
+} 
+
+.about__third-wrap {
+	margin-left: 70px;
+	padding-top: 115px;
+	@media (max-width: $screen-md-min) {
+		margin: 0;		
+		padding-top: 10px;
+}
+}
+
+
+
+.about__first-screen,
+.about__second-screen,
+.about__third-screen {
+	position: relative;
+	width: 405px;
+	height: 255px;
+	border-radius: 5px;
+	background-color: #c1c7c8;
+}
+
+.about__first-screen {
+
+	@media (max-width: $screen-md-min) {
+		width: 565px;
+		height: 355px;
+		z-index: 10;
+	}
+}
+
+.about__second-screen {
+	@media (min-width: $screen-md-min) {
+		width: 565px;
+		height: 355px;
+		z-index: 10;
+	}
+}
+
+//browser content
+.round-button-1,
+.round-button-2,
+.round-button-3 {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-top: 3.5%;
+	margin-left: 5px;
+	background-color: $greyBackground;
+	border-radius: 50%;
+}
+.round-button-1 {
+	margin-left: 12px;
+}
+
+.right-button {
+	display: inline-block;
+	float: right;
+	margin-top: 5%;
+	margin-right: 4%;
+	width: 12px;
+	height: 5px;
+	background-color: $greyBackground;
+	border-radius: 3px;
+}
+
+.browser-content {
+	width: 98%;
+	height: 82%;
+	margin: 2.5% auto 2%;	
+	border-radius: 10px;	
+}
+
+.about__first-screen .browser-content {
+	background: url('../img/site2.jpg');
+	background-size: cover;
+	@media (max-width: $screen-md-min) {
+		background: url('../img/site1.jpg');
+		background-size: cover;
+	}
+}
+
+.about__third-screen .browser-content {
+	background: url('../img/site3.jpg');
+	background-size: cover;
+}
+
+.about__second-screen {
+	.browser-content {
+		height: 83%;
+		background: url('../img/site1.jpg');
+		background-size: cover;
+
+		@media (max-width: $screen-md-min) {
+			background: url('../img/site2.jpg');
+			background-size: cover;
+		}
+	}
+	.right-button {	
+		margin-top: 4%;
+		margin-right: 2.5%;
+	}
+}
+
+
+.about__third-screen {
+
+}
+
+.about__bottom-container {
+	padding-top: 55px;
+}
+
+.why-choose-column {
+	padding-left: 0;
+	@media (max-width: $screen-md-min) {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+}
+
+.about__title-client {
+	margin: 10px 0 30px 0;
+	font-size: 1em;
+	font-weight: 900;
+	color: $greyColor;
+}
+
+.about__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: .8125em;	
+}
+
+.about__list-item {
+	line-height: 2em;
+
+	.fa-arrow-right {
+		margin-right: 5px;
+		color: $redColor;
+	}
+}
+
+.about__intro-text {	
+	margin-left: 10px;
+	margin-bottom: 60px;
+	font-size: .8125em;
+	line-height: 24.7px;
+
+	@media (max-width: $screen-md-min) {	
+		text-align: center;
+	}
+}
+.about__intro-text__link {
+	color: $redColor;
+	text-decoration: underline;
+	&:hover {
+		color: $redColor;
+		text-decoration: none;
+		opacity: .7;
+	}
+}
+
+.diagrams-row .col-md-3 {
+	padding-left: 7px; 
+}
+
+.about__diagram {
+	width: 125px;
+	height: 100px;
+	padding-top: 23px;
+	background: url('../img/50p.png') no-repeat 50% 0;
+	
+	@media (max-width: $screen-md-min) {
+		margin: auto;
+	}
+}
+
+.about__diagram__percent,
+.about__diagram__legend {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.875em;
+	font-weight: 900;
+	color: $greyColor;
+}
+
+.about__diagram__legend {
+	font-size: 1em;
+}
+
+.about__quote {
+	position:relative;
+	display: block;
+	margin-bottom: 10px;
+	padding: 0 10px 15px 20px;	
+	font-size: 13px;
+	line-height: 24.7px;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	quotes: none;
+}
+
+.triangle {
+	position: absolute;
+	content: '';
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 20px solid #f8f8f8; 
+	border-left: 20px solid transparent;
+
+}
+
+.about__quote-author {
+	margin-left: 65px;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 1.15em;	
+	color: #777777;
+}
