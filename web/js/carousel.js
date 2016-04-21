@@ -1,23 +1,54 @@
 var carousel = (function () {
     var currentPosition = 0;
+    var flag = true;
 
 
 
     return {
         init: function () {
             var
-                _this = this;
+                carousel = $('.carousel__list');
 
-            $('.btn').on('click', function (e) {
+            $('.clients__btn-right').on('click', (function(e){
                 e.preventDefault();
-                var $this = $(this);
 
-                if (currentPosition < 0 && $this.hasClass('clients__btn-right')) {
-                    _this.moveCarousel('forward');
-                } else if (currentPosition > -800 && $this.hasClass('clients__btn-left')) {
-                    _this.moveCarousel('backward');
+                if (flag &&currentPosition > -800 ) {
+                    flag = false;
+                    currentPosition -= 200;
+
+                    carousel.animate({
+                        opacity: 0.5,
+                        left: '-=200'
+                    }, 500, function () {
+                        carousel.animate({
+                            opacity: 1
+                        }, 100);
+
+                        flag = true;
+                    });
                 }
-            });
+            }));
+
+            $('.clients__btn-left').on('click', (function(e){
+                e.preventDefault();
+
+                if (flag && currentPosition < 0 ) {
+                    flag = false;
+                    currentPosition += 200;
+
+                    carousel.animate({
+                        opacity: 0.5,
+                        left: '+=200'
+                    }, 500, function () {
+                        carousel.animate({
+                            opacity: 1
+                        }, 100);
+
+                        flag = true;
+                    });
+                }
+            }));
+
             //====== scroll section =======
             $(document).ready(function(){
                 var margin,
@@ -48,19 +79,6 @@ var carousel = (function () {
                     }
                 });
             });
-        },
-        moveCarousel : function(direction){
-            var
-                firstSlide = $('.carousel__item.first'),
-                margin = 200;
-
-            if (direction === 'forward') {
-                currentPosition = currentPosition + margin;
-                firstSlide.css('margin-left', currentPosition);
-            } else if (direction === 'backward') {
-                currentPosition = currentPosition - margin;
-                firstSlide.css('margin-left', currentPosition);
-            }
         }
     }
 }());
