@@ -59,6 +59,7 @@ gulp.task('html:build', function () {
 gulp.task('styles:build', function() {
   return sass('src/styles/main.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 5 version'))
+    .pipe(gulp.dest('web/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano())
     .pipe(gulp.dest('web/css'))

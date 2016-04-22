@@ -216,11 +216,25 @@
 	width: 125px;
 	height: 100px;
 	padding-top: 23px;
-	background: url('../img/50p.png') no-repeat 50% 0;
-	
 	@media (max-width: $screen-md-min) {
 		margin: auto;
 	}
+}
+
+.about__diagram__50 {
+	background: url('../img/50p.png') no-repeat 50% 0;
+}
+
+.about__diagram__70 {
+	background: url('../img/70p.png') no-repeat 50% 0;
+}
+
+.about__diagram__80 {
+	background: url('../img/80p.png') no-repeat 50% 0;
+}
+
+.about__diagram__100 {
+	background: url('../img/100p.png') no-repeat 50% 0;
 }
 
 .about__diagram__percent,
@@ -246,17 +260,6 @@
 	background-color: #f8f8f8;
 	border-radius: 5px;
 	quotes: none;
-}
-
-.triangle {
-	position: absolute;
-	content: '';
-	top: 100%;
-	width: 0;
-	height: 0;
-	border-top: 20px solid #f8f8f8; 
-	border-left: 20px solid transparent;
-
 }
 
 .about__quote-author {

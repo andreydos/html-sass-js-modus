@@ -8,7 +8,8 @@ var slider = (function () {
     return {
         init: function () {
 
-            var _this = this;
+            var _this = this,
+                sliderControlBtn = $('.home__slider-controls .btn');
 
             //create dots
 
@@ -18,7 +19,7 @@ var slider = (function () {
 
             _this.autoSwitch();
 
-            $('.btn').on('click', function(e){
+            sliderControlBtn.on('click', function(e){
                 e.preventDefault();
 
                 var $this = $(this),

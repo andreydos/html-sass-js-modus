@@ -67,26 +67,16 @@
 	border-radius: 0 5px 5px 0;
 }
 .slider__dots{
-	position: absolute;
-	bottom: 0;
-  margin: auto;
+  	margin: auto;
 	z-index: 500;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	width: 60%;
-    @media (max-width: $screen-md-min) {
-      width: 80%;
-    }
-
 }
 
 .slider__dots-item{
   display: inline-block;
   		width: 5.5%;
-        @media (max-width: $screen-md-min) {
-          width: 10%;
-        }
   		height: 5px;
   		margin-left: 5px;
   		background: $greyColor;
@@ -110,13 +100,13 @@
   z-index: 200;
   top: 28%;
   left: 37.5%;
-	width: 25%;
+  width: 25%;
   margin: auto;
 	padding-bottom: 65px;
 	color: white;
 	text-align: center;
 	@media (max-width: $screen-md-min) {
-		width: 45%;
+	  width: 45%;
       left: 27.5%;
 	}
 }
